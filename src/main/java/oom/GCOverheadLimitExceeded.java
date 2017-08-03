@@ -7,7 +7,22 @@ import java.security.SecureRandom;
 import java.util.Properties;
 import java.util.stream.Stream;
 import utils.Utils;
-
+/**
+ * VM options:
+ *
+ * <blockquote>
+ *
+ * <pre>
+ *     -Xmx4m
+ *     -XX:+PrintGC
+ *     -XX:+PrintGCDetails
+ *     -XX:+PrintGCTimeStamps
+ *     -Xloggc:logs/gc.log
+ *     -XX:-UseGCOverheadLimit
+ * </pre>
+ *
+ * </blockquote>
+ */
 public class GCOverheadLimitExceeded {
 
   public static void main(String args[]) {

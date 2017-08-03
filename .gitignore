@@ -5,3 +5,6 @@ out/
 .gradle/
 logs/
 gradle/
+gradlew
+gradlew.bat
+jvm-demo.iml

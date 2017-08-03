@@ -3,6 +3,21 @@ package oom;
 import java.util.stream.Stream;
 import utils.Utils;
 
+/**
+ * VM options:
+ *
+ * <blockquote>
+ *
+ * <pre>
+ *     -Xmx10m
+ *     -XX:+PrintGC
+ *     -XX:+PrintGCDetails
+ *     -XX:+PrintGCTimeStamps
+ *     -Xloggc:logs/gc.log
+ * </pre>
+ *
+ * </blockquote>
+ */
 public class RequestedArraySizeExceedsVMLimit {
 
   public static void main(String[] args) {
@@ -20,8 +35,7 @@ public class RequestedArraySizeExceedsVMLimit {
               final int size = Integer.MAX_VALUE - index;
               try {
                 int[] arr = new int[size];
-                System.out.format(
-                    "Successfully initialized an array with %,d elements.\n", size);
+                System.out.format("Successfully initialized an array with %,d elements.\n", size);
               } catch (Throwable t) {
                 t.printStackTrace();
               }
