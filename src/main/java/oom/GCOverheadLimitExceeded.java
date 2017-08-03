@@ -1,9 +1,12 @@
+package oom;
+
 import static java.lang.System.getProperties;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Properties;
 import java.util.stream.Stream;
+import utils.Utils;
 
 public class GCOverheadLimitExceeded {
 
@@ -17,6 +20,6 @@ public class GCOverheadLimitExceeded {
 
   private static void func(final Properties properties, final SecureRandom secureRandom) {
     properties.setProperty(String.valueOf(secureRandom.nextInt()), "value");
-    MyScala.printCurrentMemory();
+    Utils.printCurrentMemory();
   }
 }

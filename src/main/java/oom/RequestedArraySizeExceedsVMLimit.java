@@ -1,4 +1,7 @@
+package oom;
+
 import java.util.stream.Stream;
+import utils.Utils;
 
 public class RequestedArraySizeExceedsVMLimit {
 
@@ -9,7 +12,7 @@ public class RequestedArraySizeExceedsVMLimit {
     // 2^31-1 = 2,147,483,647 (Requested array size exceeds VM limit)
     // 2^31-0 = 2,147,483,648 (Requested array size exceeds VM limit)
 
-    MyScala.printCurrentMemory();
+    Utils.printCurrentMemory();
 
     Stream.of(3, 2, 1, 0)
         .forEach(

@@ -1,6 +1,8 @@
+package utils
+
 import java.time.LocalTime
 
-object MyScala {
+object Utils {
 
   val size = 1024
 
